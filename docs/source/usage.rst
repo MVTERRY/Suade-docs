@@ -40,6 +40,6 @@ In the example above you would replace ``SECRET`` with your secret UUID
 
 or for a curl request:
 
->>> curl --location 'https://suade-tech.herokuapp.com/ask?prompt=how%20can%20I%20become%20a%20beter%20sales%20person%3F&secret=SECRET'
+>>> curl --location 'https://suade-tech.herokuapp.com/ask?prompt=PROMPT&secret=SECRET'
 
-In the example above you would replace ``SECRET`` with your secret UUID
+In the example above you would replace ``SECRET`` with your secret UUID and ``PROMPT`` with your prompt
