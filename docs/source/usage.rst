@@ -1,34 +1,44 @@
 Usage
 =====
 
-.. _installation:
+.. _api-secret:
 
-Installation
+Obtain a secret
 ------------
 
-To use Lumache, first install it using pip:
+To make a request to this API you must first obtain a secret. Within every request you make
+you will pass this secret as an paramater insuring your status!
+
+Traditional Auth will be implemented as this project develops.
+
+To request a secret please email ``matthew@suade.tech`` and follow the instructions that follow
+
 
 .. code-block:: console
 
    (.venv) $ pip install lumache
 
-Creating recipes
+Making a request
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
+To make a request to our api you'll use a get request to the url ``https://suade-tech.herokuapp.com/ask``
+your two parameters will be ``secret``, and ``prompt``. enter in your secret within the ``secret`` paramter and any request you'd like to ask
+our generative ai within the ``prompt`` paramater.
 
 For example:
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+>>> import requests
+
+>>> url = 'https://suade-tech.herokuapp.com/ask'
+>>> params = {
+            'prompt': 'How can I become a better sales person?',
+            'secret': 'SECRET'
+         }
+>>> response = requests.get(url, params=params)
+
+>>> if response.status_code == 200:
+>>>    print(response.content)
+>>> else:
+>>>    print(f'Request failed with status code {response.status_code}.')
+[]
 

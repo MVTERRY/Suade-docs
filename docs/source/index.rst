@@ -1,13 +1,12 @@
-Welcome to Suades's documentation!
+Welcome to Suade's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Suade** is a sophisticated generative AI that is trained on the next-generation sales
+techniques and conversation science. 
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`usage` section for further information, including how to obtain a :ref:`api-secret` UUID
+to begin utilizing the api!
+
 
 .. note::
 
