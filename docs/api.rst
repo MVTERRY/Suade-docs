@@ -14,7 +14,7 @@ inputs: ``prompt``, ``secret``
 -------
 inputs: ``secret``, ``business``, ``description``, ``setting``, ``narrative``
 
-``secret`` is you company's secret UUID for AUTH
+``secret`` is your company's secret UUID for AUTH
 
 ``business`` refers to the name of the business
 
